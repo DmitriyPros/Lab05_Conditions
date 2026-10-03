@@ -53,7 +53,7 @@ else if (goodAttendance && !goodGrades)
 else
 {
     Console.WriteLine("- Проблемы и с посещаемостью, и с оценками! Бегом к преподавателю, бездарь!");
-}*/
+}
 
 Console.Write("Введите ваш возраст: ");
 int age = int.Parse(Console.ReadLine());
@@ -67,6 +67,81 @@ Console.Write("\nВведите число: ");
 int n = int.Parse(Console.ReadLine());
 string parity = n % 2 == 0 ? "чётное" : "нечётное";
 Console.WriteLine($"Число {n} - {parity}.");
+
+Console.WriteLine("Меню");
+Console.WriteLine("1. Посмотреть расписание");
+Console.WriteLine("2. Посмотреть оценки");
+Console.WriteLine("3. Связаться с преподавателем");
+Console.WriteLine("4. Выйти");
+Console.Write("Выберите пункт (1-4): ");
+string choice = Console.ReadLine();
+switch (choice)
+{
+    case "1":
+        Console.WriteLine("Расписание: ИСП-241, каб. 1-02, 08:30");
+        break;
+    case "2":
+        Console.WriteLine("Ваши оценки: ИСРПО-99, РПМ-102,");
+        break;
+    case "3":
+        Console.WriteLine("Email: denis.leontev92@yandex.ru");
+        break;
+    case "4":
+        Console.WriteLine("До свидания!");
+        break;
+    default:
+        Console.WriteLine($"Ошибка: пункт <<{choice}>> не существует. Введите число от 1 до 4.");
+        break;
+}
+
+Console.Write("\nВведите номер дня недели (1-7): ");
+int dayNumber = int.Parse(Console.ReadLine());
+switch (dayNumber)
+{
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+        Console.WriteLine("Рабочий день - пора учиться!");
+        break;
+    case 6:
+    case 7:
+        Console.WriteLine("Выходной - заслуженный отдых.");
+        break;
+    default:
+        Console.WriteLine("Такого дня не существует!");
+        break;
+}*/
+
+Console.Write("\nВведите номер месяца (1-12): ");
+int month = int.Parse(Console.ReadLine());
+switch (month)
+{
+    case 12:
+    case 1:
+    case 2:
+        Console.WriteLine("Зима");
+        break;
+    case 3:
+    case 4:
+    case 5:
+        Console.WriteLine("Весна");
+        break;
+    case 6:
+    case 7:
+    case 8:
+        Console.WriteLine("Лето");
+        break;
+    case 9:
+    case 10:
+    case 11:
+        Console.WriteLine("Осень");
+        break;
+    default:
+        Console.WriteLine("Такого месяца не существует!");
+        break;
+}
 
 
 
